@@ -1,0 +1,27 @@
+<?php
+
+// ------------------------------------ paths
+// ---------------- file path to the web root
+define('SYS_WEB', '/var/www') ;
+// ---------------- file path to the app
+define('SYS_APP', SYS_WEB . '/inspicones') ;
+// ---------------- host
+define('WEB_HOST', 'http://my.website.tld') ;
+// ---------------- web path to the app
+define('WEB_APP', '/inspicones') ;
+// ---------------- file path to the template files
+define('SYS_TPL', SYS_APP.'/tpl') ;
+// ---------------- root path for storing icons
+define('SYS_ICONS', SYS_APP.'/icons') ;
+define('WEB_ICONS', WEB_APP.'/icons');
+
+// inside icons directory
+$iconsSources = array(
+    'some_directory',
+    'other_directory',
+);
+
+// ------------------------------------ session name
+define('SESSION_NAME', 'inspicones') ;
+
+?>
