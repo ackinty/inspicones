@@ -2,6 +2,7 @@
 
 include_once('../inspicones.conf') ;
 include_once('../vendor/autoload.php');
+include_once('../lib/wizard.php');
 
 define('DEBUG', true) ;
 

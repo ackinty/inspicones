@@ -2,6 +2,14 @@
 
 {% block content %}
 
-Hello
+<h1>Inspicones</h1>
+
+{% for lines in iconsList %}
+<div class="icons">
+    {% for iconPath in lines %}
+        <img src="{{ iconPath }}">
+    {% endfor %}
+</div>
+{% endfor %}
 
 {% endblock %}

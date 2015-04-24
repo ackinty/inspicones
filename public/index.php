@@ -18,7 +18,21 @@ $app->register(new \Slim\Views\Twig(SYS_APP . '/tpl'));
 $app->get(
     '/',
     function ($request, $response, $args) {
-        return $this['view']->render($response, 'index.twig');
+        $wizard = new Wizard();
+        $wizard->addIconDir(array(
+            '/delapouite',
+        ));
+
+        $iconsList = $wizard->play();
+        foreach ($iconsList as $lineKey => $line) {
+            foreach ($line as $iconKey => $icon) {
+                $iconsList[$lineKey][$iconKey] = str_replace(SYS_WEB, '', $icon);
+            }
+        }
+
+        return $this['view']->render($response, 'index.twig', array(
+            'iconsList' => $iconsList,
+        ));
     }
 )->setName('home');
 // ============ END ROUTING ===================
