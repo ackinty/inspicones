@@ -67,6 +67,8 @@ class Wizard
 
                 // suppress the choosen icon from the list
                 unset($allIconsList[$index]);
+                $allIconsList = array_values($allIconsList);
+                $allIconsNb--;
             }
 
             array_push($iconsList, $iconsLine);
