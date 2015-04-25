@@ -40,11 +40,11 @@ class Wizard
      */
     public function play($iconNb=3, $rowNb=3)
     {
-        if ($iconNb <= self::MIN_ICON_NB or $iconNb >= self::MAX_ICON_NB) {
+        if ($iconNb < self::MIN_ICON_NB or $iconNb > self::MAX_ICON_NB) {
             $iconNb = self::DEFAULT_ICON_NB;
         }
 
-        if ($rowNb <= self::MIN_ROW_NB or $rowNb >= self::MAX_ROW_NB) {
+        if ($rowNb < self::MIN_ROW_NB or $rowNb > self::MAX_ROW_NB) {
             $rowNb = self::DEFAULT_ROW_NB;
         }
 
